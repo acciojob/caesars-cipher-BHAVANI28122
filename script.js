@@ -39,7 +39,9 @@ function ROT13(encryptedstring) {
 		let encryptedWord = encrypt[i];
 		let decrypt ="";
 		for(let j=0;j<encryptedWord.length;j++){
-			decrypt = decrypt + lookup[encryptedWord.charAt(j)];
+			let char = encryptedWord.charAt(j);
+			let decode = lookup[char];
+			decrypt = decrypt +decode;
 			
 		}
 		decryptstring.push(decrypt);
