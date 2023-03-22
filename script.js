@@ -26,7 +26,9 @@
 		'W': 'J',
 		'X': 'K',
 		'Y': 'L',
-		'Z': 'M'
+		'Z': 'M',
+		'?':'?',
+		',':','
 	};
 function ROT13(encodedStr) {
 
