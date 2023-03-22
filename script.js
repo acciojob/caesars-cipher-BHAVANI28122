@@ -1,6 +1,6 @@
 // Your Script here.
 
-	let lookup = {
+	const lookup = {
 		'A': 'N',
 		'B': 'O',
 		'C': 'P',
@@ -28,22 +28,22 @@
 		'Y': 'L',
 		'Z': 'M'
 	};
-function ROT13(encryptedstring) {
+function ROT13(encodedStr) {
 
-	let encrypt = encryptedstring.split(" ");
-	let decryptstring =[];
-	for(let i=0;i<encrypt.length;i++){
+	let words = encodedStr.split(" ");
+	let decodedArr =[];
+	for(let i=0;i<words.length;i++){
 
-		let encryptedWord = encrypt[i];
-		let decrypt ="";
-		for(let j=0;j<encryptedWord.length;j++){
-			let char = encryptedWord.charAt(j);
-			let decode = lookup[char];
-			decrypt = decrypt +decode;
+		let word = words[i];
+		let decoded_word ="";
+		for(let j=0;j< word.length;j++){
+			let char = word.charAt(j);
+			let decoded_char = lookup[char];
+			decoded_word = decoded_word +decoded_char;
 			
 		}
-		decryptstring.push(decrypt);
+		decodedArr.push(decoded_word);
 	}
-	return decryptstring.join(" ");
+	return decodedArr.join(" ");
 	
 }
