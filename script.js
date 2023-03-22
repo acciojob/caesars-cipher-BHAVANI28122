@@ -1,6 +1,4 @@
 // Your Script here.
-function ROT13(encryptedstring) {
-
 
 	let lookup = {
 		'A': 'N',
@@ -28,10 +26,10 @@ function ROT13(encryptedstring) {
 		'W': 'J',
 		'X': 'K',
 		'Y': 'L',
-		'Z': 'M',
-		
-	
+		'Z': 'M'
 	};
+function ROT13(encryptedstring) {
+
 	let encrypt = encryptedstring.split(" ");
 	let decryptstring =[];
 	for(let i=0;i<encrypt.length;i++){
